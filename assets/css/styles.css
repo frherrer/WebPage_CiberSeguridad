@@ -1,0 +1,15 @@
+.custom-navbar {
+background-color: saddlebrown; /* cualquier color que tú quieras */
+
+}
+
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+color: whitesmoke; /* color del texto */
+
+}
+
+.custom-navbar .nav-link:hover {
+  color: #f1c40f; /* color al pasar el mouse */
+}
