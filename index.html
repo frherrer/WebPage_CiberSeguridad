@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CiberSegurito</title>
+    <title>CiberSegurito - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
-
 </head>
-
 <body>
     <div id="menu"></div>
-
+    <section class="text-white text-center">
+        <div class="imagen-principal text-white text-center d-flex align-items-center justify-content-center">
+            <div class="contenido-titulo">
+                <h1 class="display-4">Protege tu mundo digital</h1>
+                <p class="lead">Descubre los riesgos más comunes y cómo prevenirlos.</p>
+            </div>
+        </div>
+    </section>
+<div id="footer"></div>
 <script src="assets/js/menu.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            $(".contenido-titulo").fadeIn(1500); 
+        });
+    </script>
 </body>
-
 </html>
