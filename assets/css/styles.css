@@ -10,3 +10,9 @@
 .contenido-titulo {
   display: none;
 }
+
+.bg-secondary {
+background-color: gainsboro !important; 
+color: black !important; 
+}
+
