@@ -23,4 +23,24 @@ color: black !important;
    
 }
 
+@media (max-width: 768px) {
+  .contenido-titulo {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .imagen-principal {
+    height: 50vh; /* reduce la altura en celulares */
+  }
+
+  .contenido-titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  .contenido-titulo p {
+    font-size: 1rem;
+  }
+}
 
