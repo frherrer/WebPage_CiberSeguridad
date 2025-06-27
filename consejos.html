@@ -70,7 +70,7 @@
     <script>
       $(document).ready(function () {
         $("#contactForm").on("submit", function (e) {
-           e.preventDefault();
+          e.preventDefault();
           const nombre = $("#nombre").val().trim();
           const email = $("#email").val().trim();
           const mensaje = $("#mensaje").val().trim();
@@ -96,7 +96,7 @@
           if (!valid) {
             e.preventDefault();
           } else {
-              Swal.fire({
+            Swal.fire({
               icon: "success",
               title: "Formulario Enviado",
               text: "Formulario enviado correctamente.",
@@ -114,10 +114,10 @@
             });
           } else {
             Swal.fire({
-                icon: "error",
-                title: "Incorrecto",
-                text: "Puedes leer más información",
-    });
+              icon: "error",
+              title: "Incorrecto",
+              text: "Puedes leer más información",
+            });
           }
           $("#testModal").modal("hide");
         });
