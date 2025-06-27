@@ -16,3 +16,11 @@ background-color: gainsboro !important;
 color: black !important; 
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black; /* Fondo negro */
+    background-size: 100% 100%;
+   
+}
+
+
