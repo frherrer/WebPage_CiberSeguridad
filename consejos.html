@@ -1,27 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CiberSegurito - Consejos</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/styles.css" rel="stylesheet" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                    <title>CiberSegurito - Consejos</title>
-                    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-                        <link href="assets/css/styles.css" rel="stylesheet"></head>
+  <body>
+    <div id="menu"></div>
+    <section class="container py-5">
+      <h2 class="text-center mb-4">Consejos para Protegerte en Línea</h2>
+      <!-- Lista de consejos -->
+      <ul class="list-group mb-5">
+        <li class="list-group-item">
+          Usa contraseñas seguras y únicas para cada cuenta.
+        </li>
+        <li class="list-group-item">
+          No hagas clic en enlaces sospechosos o correos no solicitados.
+        </li>
+        <li class="list-group-item">
+          Activa la autenticación en dos pasos siempre que puedas.
+        </li>
+        <li class="list-group-item">
+          Mantén actualizado tu sistema operativo y antivirus.
+        </li>
+        <li class="list-group-item">
+          No compartas información personal en sitios no confiables.
+        </li>
+      </ul>
+      <!-- Formulario de contacto -->
+      <h3 class="mb-3">¿Tienes dudas? Contáctanos</h3>
+      <form id="contactForm" novalidate>
+        <div class="mb-3">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" required />
+          <div class="invalid-feedback">Por favor ingresa tu nombre.</div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="email" required />
+          <div class="invalid-feedback">Ingresa un correo válido.</div>
+        </div>
+        <div class="mb-3">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea
+            class="form-control"
+            id="mensaje"
+            rows="3"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Este campo es obligatorio.</div>
+        </div>
+        <button type="submit" class="btn btn-success">Enviar</button>
+        <button
+          type="button"
+          class="btn btn-warning ms-2"
+          data-bs-toggle="modal"
+          data-bs-target="#testModal"
+        >
+          Test de Seguridad
+        </button>
+      </form>
+    </section>
+    <div id="footer"></div>
+    <script src="assets/js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-                        <body>
-                            <div id="menu"></div>
-                            <section class="text-white text-center"></section>
-                            <div id="footer"></div>
-                            <script src="assets/js/menu.js"></script>
-                            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-                            <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-
-                            <script>
-                                $(document).ready(function () {
-                                    $(".contenido-titulo").fadeIn(1500);
-                                });
-                            </script>
-                        </body>
-
-                    </html>
+    <script>
+      $(document).ready(function () {
+        $("#contactForm").on("submit", function (e) {
+          const nombre = $("#nombre").val().trim();
+          const email = $("#email").val().trim();
+          const mensaje = $("#mensaje").val().trim();
+          let valid = true;
+          if (nombre === "") {
+            $("#nombre").addClass("is-invalid");
+            valid = false;
+          } else {
+            $("#nombre").removeClass("is-invalid");
+          }
+          if (email === "" || !email.includes("@")) {
+            $("#email").addClass("is-invalid");
+            valid = false;
+          } else {
+            $("#email").removeClass("is-invalid");
+          }
+          if (mensaje === "") {
+            $("#mensaje").addClass("is-invalid");
+            valid = false;
+          } else {
+            $("#mensaje").removeClass("is-invalid");
+          }
+          if (!valid) {
+            e.preventDefault();
+          } else {
+            alert("Formulario enviado correctamente ✅");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
